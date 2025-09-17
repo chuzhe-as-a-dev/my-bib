@@ -44,6 +44,31 @@
   slides     = {2024 - WeBridge- Synthesizing Stored Procedures for Large-Scale Real-World Web Applications (slides).pdf}
 }
 
+@article{jiang25,
+  userc      = {CCF A类国际会议},
+  author+an  = {4=chuzhe},
+  author     = {Jiang, Zhe and Wang, Zhaoguo and Lan, Haoning and Tang, Chuzhe and Ding, Haoran and Wang, Lefeng and Zou, Songyun and Wei, Zhuoran and Liu, Yongcun and Yu, Xiang and Ren, Yang and Li, Guoliang and Chen, Haibo},
+  title      = {{GRewriter}: Practical Query Rewriting with Automatic Rule Set Expansion in {GaussDB}},
+  year       = {2025},
+  issue_date = {August 2025},
+  publisher  = {VLDB Endowment},
+  volume     = {18},
+  number     = {12},
+  issn       = {2150-8097},
+  doi        = {10.14778/3750601.3750622},
+  journal    = {Proceedings of the VLDB Endowment},
+  month      = sep,
+  pages      = {4991--5003},
+  numpages   = {13},
+  abbr       = {PVLDB},
+  venue_link = {https://vldb.org/pvldb/volumes/18/},
+  abstract   = {
+                Effectively rewriting a wide range of complex and diverse queries is critical for database systems. Huawei GaussDB has been experiencing limited extensibility of its existing query rewriter. The problem is rooted in the need for one-size-fits-all rewrites by its pipelined rewrite workflow and the source code-level coupling of rewrite logic. This makes it not only difficult to identify generic, broadly applicable rewrites but also engineering-intensive to program them into the system.<br/>
+                This paper presents GRewriter, GaussDB's new bolt-on extensible query rewriter powered by automated rewrite rule discovery. GRewriter sits atop the existing optimizer stack to explore useful rewrites, allowing a variety of rules to coexist and be selected on a per-query basis. A new rule language, G-DSL, is used to express rewrite rules so that the rewrite engine is not coupled with specific rules. To improve rewrite efficiency, a new rule index structure and a rewrite history cache are introduced. Rules in GRewriter are produced by an offline rule generator. With novel enumeration techniques and a new equivalence theorem, our rule generator can efficiently discover formally verified rules that are much more expressive than prior research prototypes. For operational convenience, GRewriter also supports manual rule authoring and interactive management of rules through familiar SQL interfaces.<br/>
+                GRewriter has been integrated into GaussDB and is gradually rolling out to customers. GRewriter equips GaussDB with over a hundred rules while maintaining negligible overhead (<1%). These new rewrite rules have enhanced query performance for two key customer applications, an ERP system and a Banking transaction system, reducing production query latency by up to 99.9%---from 26 seconds to just 17 milliseconds.},
+  pdf        = {2025 - GRewriter- Practical Query Rewriting with Automatic Rule Set Expansion in GaussDB.pdf}
+}
+
 @inproceedings{tang20,
   presort    = {a},
   author+an  = {1=chuzhe},
@@ -190,7 +215,8 @@ userc      = {SCI、EI索引},
   numpages   = {10},
   abbr       = {CACM},
   venue_link = {https://cacm.acm.org/magazines/2025/4/},
-  abstract   = {Transactions are the fundamental database abstraction for ensuring application correctness under concurrency and failures. Using database transactions, developers are only tasked with demarcating critical business logic into transactions, and the underlying database system is responsible for coordinating their execution. Yet, in today's Web applications, transactions are often constructed in an ad hoc manner. That is, developers might explicitly use locking primitives or manual validation to coordinate critical code fragments, instead of relying on database transactions. We refer to such application-coordinated transactions as ad hoc transactions.<br/>
+  abstract   = {
+                Transactions are the fundamental database abstraction for ensuring application correctness under concurrency and failures. Using database transactions, developers are only tasked with demarcating critical business logic into transactions, and the underlying database system is responsible for coordinating their execution. Yet, in today's Web applications, transactions are often constructed in an ad hoc manner. That is, developers might explicitly use locking primitives or manual validation to coordinate critical code fragments, instead of relying on database transactions. We refer to such application-coordinated transactions as ad hoc transactions.<br/>
                 This paper presents the first comprehensive study on ad hoc transactions. Examining 91 ad hoc transaction instances taken from eight popular open-source Web applications, we find that (i) every application studied uses ad hoc transactions (up to 16 per application), 71 of which play critical roles; (ii) compared with database transactions, coordination strategies of ad hoc transactions is much more flexible; (iii) ad hoc transactions are error-prone---53 of them have correctness issues, and 33 of them are confirmed by developers; and (iv) ad hoc transactions have the potential to improve performance in contentious workloads by utilizing application semantics such as access patterns. Finally, this paper concludes with a discussion about the implications of ad hoc transactions and opportunities for future research.},
   pdf        = {2025 - Many Faces of Ad Hoc Transactions.pdf},
   selected   = {true}
@@ -205,13 +231,14 @@ userc     = {EI索引},
   author     = {Chuzhe Tang and Zhaoguo Wang and Jinyang Li and Haibo Chen},
   title      = {Sonata: Multi-Database Transactions Made Fast and Serializable},
   year       = {2025},
-  month      = {June},
+  issue_date = {June 2025},
   publisher  = {VLDB Endowment},
   volume     = {18},
   number     = {10},
   issn       = {2150-8097},
   doi        = {10.14778/3748191.3748207},
   journal    = {Proceedings of the VLDB Endowment},
+  month      = sep,
   pages      = {3449--3462},
   numpages   = {14},
   abbr       = {PVLDB},
@@ -220,23 +247,6 @@ userc     = {EI索引},
   pdf        = {2025 - Sonata- Multi-Database Transactions Made Fast and Serializable.pdf},
   slides     = {2025 - Sonata- Multi-Database Transactions Made Fast and Serializable (slides).pdf},
   selected   = {true}
-}
-
-userc     = {EI索引},
-@article{tang25c,
-  userc      = {CCF A类国际会议},
-  author+an  = {4=chuzhe},
-  author     = {Zhe Jiang and Zhaoguo Wang and Haoning Lan and Chuzhe Tang and Haoran Ding and Lefeng Wang and Zhuoran Wei and Yongcun Liu and Xiang Yu and Yang Ren and Guoliang Li and Haibo Chen},
-  title      = {{GRewriter}: Practical Query Rewriting with Automatic Rule Set Expansion in {GaussDB}  (to appear)},
-  year       = {2025},
-  month      = {August},
-  publisher  = {VLDB Endowment},
-  volume     = {18},
-  number     = {12},
-  issn       = {2150-8097},
-  journal    = {Proceedings of the VLDB Endowment},
-  abbr       = {PVLDB},
-  venue_link = {https://vldb.org/pvldb/volumes/18/}
 }
 
 @misc{tang26,
