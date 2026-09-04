@@ -73,16 +73,24 @@
   author+an  = {2=chuzhe},
   userc      = {CCF A类国际会议},
   author     = {Jiahuan Shen and Chuzhe Tang and Haoning Lan and Ren Ren and Zhaoguo Wang},
-  title      = {{DIndex}: An Efficient On-Disk Learned Index for Memory-Constrained Environments (to appear)},
+  title      = {{DIndex}: An Efficient On-Disk Learned Index for Memory-Constrained Environments},
   year       = {2026},
   month      = {May},
-  booktitle  = {2026 IEEE 42nd International Conference on Data Engineering},
-  location   = {Montreal, Canada},
+  booktitle  = {2026 IEEE 42nd International Conference on Data Engineering (ICDE)},
+  location   = {Montreal, QC, Canada},
   series     = {ICDE '26},
   abbr       = {ICDE 2026},
   venue_link = {https://icde2026.github.io/},
   publisher  = {IEEE Computer Society},
-  address    = {Los Alamitos, CA, USA}
+  address    = {Los Alamitos, CA, USA},
+  isbn       = {979-8-3315-8365-1},
+  doi        = {10.1109/ICDE65706.2026.00032},
+  pages      = {336--349},
+  numpages   = {14},
+  abstract   = {
+                B+trees, the de facto standard for on-disk database indexing, exhibit significant performance degradation in memory-constrained environments due to frequent disk I/O that accesses out-of-cache index nodes during tree traversal. The recent proposal of in-memory learned indexes promises substantial reductions in index footprint by replacing traditional hierarchical structures with compact learned models. However, they require sorted data layouts for accurate lookups, which are costly to maintain on disks, especially in the presence of writes. So far, attempts to adapt learned indexes for on-disk use have yet to fully realize the performance benefits of learned models: they either incur massive disruptive data movement to maintain data layout or introduce significant metadata overhead that negates the space advantage of learned models.<br/>
+                We present DIndex, a new on-disk learned index tailored for memory-constrained environments. DIndex efficiently supports write operations while maintaining high read performance and low index size. Key to DIndex's design is the decoupling of logical ordering from physical data layout and a set of techniques that realize this decoupling with small metadata overhead. Specifically, DIndex proposes to maintain model-compressed pivot keys to guide error correction and a mapping table that associates data blocks' physical locations using an adaptive, variable-span mapping scheme. Experiments show that DIndex outperforms B+tree and other learned indexes by up to 28× in throughput and reduces index size by up to 99%.},
+  code       = {https://ipads.se.sjtu.edu.cn:1312/opensource/dindex}
 }
 
 @inproceedings{tang20,
