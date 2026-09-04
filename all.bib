@@ -378,3 +378,20 @@ userc      = {EI索引},
   abstract   = {Many transactions in web applications are constructed ad hoc in the application code. For example, developers might explicitly use locking primitives or validation procedures to coordinate critical code fragments. We refer to database operations coordinated by application code as ad hoc transactions. Until now, little is known about them. This paper presents the first comprehensive study on ad hoc transactions. By studying 91 ad hoc transactions among eight popular open-source web applications, we found that (i) every studied application uses ad hoc transactions (up to 16 per application), 71 of which play critical roles; (ii) compared with database transactions, concurrency control of ad hoc transactions is much more flexible; (iii) ad hoc transactions are error-prone---53 of them have correctness issues, and 33 of them are confirmed by developers; and (iv) ad hoc transactions have the potential for improving performance in contentious workloads by utilizing application semantics such as access patterns. Based on these findings, we discuss the implications of ad hoc transactions to the database research community.},
   pdf        = {2024 - Ad Hoc Transactions through the Looking Glass- An Empirical Study of Application-Level Transactions in Web Applications.pdf}
 }
+
+@inproceedings{zhang26,
+  author+an  = {2=chuzhe},
+  author     = {Siyuan Zhang and Chuzhe Tang and Anastasia Ailamaki},
+  title      = {How Hard Can Indexing Be? Principled Dataset Hardness Measurement for Learned Indexes},
+  year       = {2026},
+  month      = {August},
+  booktitle  = {Proceedings of the 7th International Workshop on Applied AI for Database Systems and Applications},
+  location   = {Boston, MA, USA},
+  series     = {AIDB '26},
+  abbr       = {AIDB 2026},
+  venue_link = {https://sites.google.com/view/aidb2026/home},
+  abstract   = {
+                Learned index structures have shown promising performance advantages over traditional indexes. Their performance is widely known to heavily depend on the underlying data distribution, as evidenced by anecdotes in the literature that certain datasets are “easy” or “hard” for learned indexes. However, a convincing quantitative metric of dataset hardness is still missing. As a result, practitioners cannot reliably estimate the potential benefits of learned indexes for their private workloads, and researchers have no principled way to identify blind spots in their index designs and evaluations.<br/>
+                This paper studies the problem of quantifying dataset hardness for learned indexes. First, we propose two scores, conformance and coverage, that together characterize metric quality while capturing a fundamental tradeoff between metric accuracy and applicability. Then, we evaluate several straightforward candidates and find that none is fully satisfactory. Still, our results reveal promising hardness indicators and offer guidelines for designing better metrics. Finally, we identify several open problems and future directions, including workload adaptation to circumvent this accuracy-applicability tradeoff in practice, and hardness-targeted dataset generation to fill the gaps in current learned index research and evaluation.},
+  pdf        = {2026 - How Hard Can Indexing Be- Principled Dataset Hardness Measurement for Learned Indexes.pdf}
+}
